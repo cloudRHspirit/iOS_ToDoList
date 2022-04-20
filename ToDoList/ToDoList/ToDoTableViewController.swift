@@ -21,19 +21,16 @@ class ToDoTableViewController: UITableViewController {
             }
         
         navigationItem.leftBarButtonItem = editButtonItem
-
     }
 
     @IBAction func unwindToToDoList(segue: UIStoryboardSegue) {
     
     }
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toDos.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCellIdentifier", for: indexPath)
         
@@ -49,9 +46,6 @@ class ToDoTableViewController: UITableViewController {
         return true
     }
     
-
-    
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
  
         if editingStyle == .delete {
